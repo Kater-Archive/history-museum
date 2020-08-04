@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kater Archive</title>
+
+    <link rel="stylesheet" href="./css/forum.css">
+    <link rel="stylesheet" href="./css/MirukuTea.css">
+    <link rel="stylesheet" href="./css/MirukuTea2.css">
+    <link rel="stylesheet" href="./css/forum-zh-hant.css">
+
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+
+<body class="Blurred no-touch HasImageBackground">
+
+    <div id=app class="App affix DynamicColored App--discussion">
+        <div id=app-navigation class="App-navigation sf-hidden">
+            <div class="Navigation ButtonGroup App-backControl"></div>
+        </div>
+        <div id=drawer class=App-drawer>
+            <header id=header class=App-header style="background-color: #02263a;">
+                <div id=header-navigation class=Header-navigation>
+                    <div class="Navigation ButtonGroup"><a class="Button Navigation-back Button--icon hasIcon"
+                            active=true type=button><i class="icon fas fa-chevron-left Button-icon"></i></a></div>
+                </div>
+                <div class=container>
+                    <h1 class=Header-title>
+                        <a id=home-link>
+                            Kater Archive
+                        </a>
+                    </h1>
+                    <div id=header-primary class=Header-primary>
+                        <ul class=Header-controls></ul>
+                    </div>
+
+                    <div id="header-secondary" class="Header-secondary">
+                        <ul class="Header-controls">
+                            <li id="headerChangeTheme" class="item-notifications">
+                                <div class="ButtonGroup Dropdown dropdown NotificationsDropdown itemCount0"><button
+                                        class="Dropdown-toggle Button Button--flat" data-toggle="dropdown"><i
+                                            class="icon fas fa-adjust Button-icon"></i></button>
+                                    <div class="Dropdown-menu Dropdown-menu--right sf-hidden"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+            </header>
+        </div>
+        <main class="App-content Rounded">
+            <div id=content>
+                <div class=DiscussionPage>
+                    <div class=DiscussionPage-discussion>
+                        <header class="Hero DiscussionHero">
+                            <div class=container>
+                                <ul class=DiscussionHero-items>
+                                    <li class=item-tags><span class=TagsLabel>
+                                            <a class=TagLabel style="text-decoration: none;">
+                                                <span id="backupUrl" class=TagLabel-text>備份來源：###</span></a></span>
+                                    <li class=item-title>
+                                        <h2 id="backupTitle" class=DiscussionHero-title>文章列表內文預覽</h2>
+                                </ul>
+                            </div>
+                        </header>
+                        <div class=container>
+                            <nav class=DiscussionPage-nav>
+                                <ul>
+                                    <li class=item-controls>
+                                        <div
+                                            class="ButtonGroup Dropdown dropdown App-primaryControl Dropdown--split itemCount1">
+                                            <button class="SplitDropdown-button Button Button--primary hasIcon disabled"
+                                                type=button title=回覆><i
+                                                    class="icon fas fa-reply Button-icon sf-hidden"></i><span
+                                                    class=Button-label>回覆</span></button>
+                                            <ul class="Dropdown-menu dropdown-menu Dropdown-menu--right sf-hidden">
+                                                <li class=item-reply>
+                                            </ul>
+                                        </div>
+                                    <li class=item-subscription>
+                                        <div class="Dropdown ButtonGroup SubscriptionMenu"><button
+                                                class="Button SubscriptionMenu-button SubscriptionMenu-button--false hasIcon disabled"
+                                                title type=button data-original-title=有新回覆時發送通知><i
+                                                    class="icon far fa-star Button-icon"></i><span
+                                                    class=Button-label>關注</span></button><button
+                                                class="Dropdown-toggle Button Button--icon SubscriptionMenu-button--false disabled"
+                                                data-toggle=dropdown><i
+                                                    class="icon fas fa-caret-down Button-icon"></i></button>
+                                            <ul class="Dropdown-menu dropdown-menu Dropdown-menu--right sf-hidden">
+                                                <li>
+                                                <li>
+                                                <li>
+                                            </ul>
+                                        </div>
+                                    <li class=item-scrubber>
+                                        <div class="PostStreamScrubber Dropdown App-titleControl"><button
+                                                class="Button Dropdown-toggle sf-hidden disabled"
+                                                data-toggle=dropdown>Kater Archive</span>
+                                            </button>
+                                            <div class="Dropdown-menu dropdown-menu">
+                                                <div class=Scrubber><a class=Scrubber-first><i
+                                                            class="icon fas fa-angle-double-up"></i> 首貼</a>
+                                                    <div class="Scrubber-scrollbar Fixed"
+                                                        style=max-height:502.219px;cursor:pointer;user-select:none;height:300px>
+                                                        <div class=Scrubber-before style=height:0%></div>
+                                                        <div class=Scrubber-handle style=cursor:move;height:16.6667%>
+                                                            <div class=Scrubber-bar></div>
+                                                            <div class=Scrubber-info><strong><span
+                                                                        class=Scrubber-index>1</span> / <span id="backupPostsCount"
+                                                                        class=Scrubber-count>5</span></strong><span
+                                                                    class=Scrubber-description>Kater Archive</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class=Scrubber-after style=height:83.3333%></div>
+                                                        <div class=Scrubber-unread style=top:100%;height:0%> 未讀</div>
+                                                    </div><a class=Scrubber-last><i
+                                                            class="icon fas fa-angle-double-down"></i> 末貼</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </ul>
+                            </nav>
+                            <div class=DiscussionPage-stream>
+                                <div id="backupPosts" class=PostStream>
+                                    <div class=PostStream-item>
+                                        <article class="Post ReplyPlaceholder" style="cursor:not-allowed;">
+                                            <header class=Post-header><img class="Avatar PostUser-avatar"
+                                                    src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill-opacity="0"/></svg>'
+                                                    style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-5)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
+                                                撰寫回覆...</header>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="./js/main.js"></script>
+</body>
+
+</html>

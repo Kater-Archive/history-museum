@@ -1,0 +1,469 @@
+:root {
+    --colored-hero: 28, 93, 153;
+    --transparency: 1;
+    --blur-radius: blur(15px)
+}
+
+.DynamicColored::before {
+    transition: linear, background-color .2s;
+    background-color: rgb(var(--colored-hero)) !important
+}
+
+@media (max-width:767px) {
+    .DynamicColored .App-drawer {
+        background-color: rgb(var(--colored-hero)) !important
+    }
+}
+
+.DynamicColored .App-header .Button {
+    background-color: transparent !important
+}
+
+.DynamicColored .App-header .FormControl::placeholder {
+    color: #fff !important
+}
+
+.DynamicColored .App-header .Button:hover,
+.DynamicColored .App-header .FormControl {
+    background-color: #00000024 !important
+}
+
+.DynamicColored .App-header .Button.active,
+.DynamicColored .App-header .Button:active,
+.DynamicColored .App-header .FormControl:focus,
+.DynamicColored .App-header .open>.Dropdown-toggle.Button {
+    background-color: #0000004d !important
+}
+
+.DiscussionPage-discussion .Scrubber-bar {
+    background-color: rgb(var(--colored-hero)) !important
+}
+
+@media (min-width:768px) {
+    .DiscussionPage-discussion .item-controls .Button--primary {
+        background-color: rgb(var(--colored-hero)) !important
+    }
+}
+
+.HasImageBackground {
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important
+}
+
+.HasImageBackground .Hero {
+    transition: linear, background-color .2s
+}
+
+body.dark.HasImageBackground .Hero {
+    background-color: rgba(27, 32, 40, var(--transparency))
+}
+
+@media (min-width:768px) {
+    .HasImageBackground .DiscussionPage>.DiscussionPage-discussion>div.container {
+        width: 100%;
+        margin: 0;
+        padding: 0 65px 30px 65px
+    }
+}
+
+@media (max-width:767px) {
+    .HasImageBackground .DiscussionPage>.DiscussionPage-discussion>div.container {
+        padding-bottom: 30px
+    }
+}
+
+.HasImageBackground .DiscussionPage>.DiscussionPage-discussion>div.container {
+    transition: linear, background-color .2s
+}
+
+body.dark.HasImageBackground .DiscussionPage>.DiscussionPage-discussion>div.container {
+    background-color: rgba(20, 25, 31, var(--transparency))
+}
+
+@media (min-width:768px) {
+    .Rounded {
+        border: none !important;
+        position: relative;
+        max-width: 1200px;
+        border-radius: 20px;
+        margin: 20px auto;
+        padding-bottom: 30px
+    }
+
+    .Rounded header.Hero {
+        border-radius: 20px 20px 0 0
+    }
+
+    .Rounded .DiscussionPage>.DiscussionPage-discussion>div.container {
+        border-radius: 0 0 20px 20px
+    }
+}
+
+.InputOption {
+    display: flex
+}
+
+.username-history {
+    border: none;
+    background: 0 0
+}
+
+.username-history:focus {
+    outline: 0
+}
+
+@keyframes preview-fade-in {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@supports (backdrop-filter:var(--blur-radius)) {
+    @media (min-width:768px) {
+
+        .HasImageBackground.Blurred .DiscussionPage-discussion,
+        .HasImageBackground.Blurred .IndexPage,
+        .HasImageBackground.Blurred .TagsPage,
+        .HasImageBackground.Blurred .UserPage {
+            backdrop-filter: var(--blur-radius);
+            border-radius: 20px;
+            box-shadow: 0 0 20px 2px #000
+        }
+    }
+}
+
+#dropdown-customstyle>li {
+    animation: dropdown-fade-in .5s
+}
+
+#dropdown-customstyle.function>li:not(.function):not(#item-customfunction),
+#dropdown-customstyle:not(.function)>li.function:not(#item-customfunction) {
+    display: none
+}
+
+.item-like>button>i,
+.item-reply>button>i {
+    margin-right: 3px
+}
+
+@media (min-width:768px) {
+    ::-webkit-scrollbar {
+        width: 1em;
+        background-color: #7d7d7d33
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #7d7d7d66
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #7d7d7d99
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #7d7d7dcc
+    }
+}
+
+.Dropdown-toggle.Button.Button--icon.Button--flat {
+    background-color: transparent;
+    box-shadow: none !important
+}
+
+#home-link {
+    transition: liner, font-size .2s;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none
+}
+
+#home-link:hover {
+    font-size: 28px
+}
+
+.App-header .Button,
+.App-header .FormControl,
+.App-header .FormControl::placeholder,
+.App-header .Search-input,
+.App-primaryControl>.Button,
+.Navigation>.Button {
+    color: #fff !important
+}
+
+body.dark .DiscussionPage-nav .Button {
+    color: #fff
+}
+
+.Hero h2 {
+    font-size: 32px
+}
+
+@media (min-width:768px) {
+    body.dark .App-drawer {
+        background: 0 0
+    }
+}
+
+.Post-body a {
+    transition: linear, border-bottom .2s;
+    border-bottom: 1px solid transparent
+}
+
+body.dark .Post-header a {
+    color: #fff
+}
+
+.App-header .Button:focus,
+body.dark .App-header .Button:focus {
+    background-color: transparent
+}
+
+.Button,
+.Button:active,
+.Button:focus,
+.Button:hover,
+.ButtonGroup>.Button.Dropdown-toggle,
+.SubscriptionMenu-button--false {
+    transition: linear background-color .2s
+}
+
+.App-header .Button:hover {
+    background-color: #085488
+}
+
+.App-header .Button:active,
+.App-header .open>.Dropdown-toggle.Button {
+    background-color: #074671;
+    box-shadow: none
+}
+
+.DiscussionList .DiscussionListItem:hover,
+.Dropdown-menu>li>a:hover,
+.Dropdown-menu>li>button:hover,
+.IndexPage .Button:not(.Button--primary):hover,
+.SubscriptionMenu-button--false:hover,
+.sideNav .Dropdown--select .Dropdown-menu>li>a:hover {
+    background-color: #dbe5f2
+}
+
+.DiscussionList .DiscussionListItem:active,
+.Dropdown-menu>li>a:active,
+.Dropdown-menu>li>button:active,
+.IndexPage .Button:not(.Button--primary):active,
+.SubscriptionMenu-button--false:active,
+.item-sort .open>.Dropdown-toggle.Button,
+.item-subscription .open>.Dropdown-toggle.Button,
+.sideNav .Dropdown--select .Dropdown-menu>li>a:active {
+    background-color: #d2dfef;
+    box-shadow: none
+}
+
+body.dark .App-header .Button:hover,
+body.dark .DiscussionList .DiscussionListItem:hover,
+body.dark .Dropdown-menu>li>a:hover,
+body.dark .Dropdown-menu>li>button:hover,
+body.dark .IndexPage .Button:not(.Button--primary):hover,
+body.dark .SubscriptionMenu-button--false:hover,
+body.dark .item-elevator .Button:hover,
+body.dark .sideNav .Dropdown--select .Dropdown-menu>li>a:hover {
+    background-color: #2b2f35
+}
+
+body.dark .App-header .Button:active,
+body.dark .App-header .open>.Dropdown-toggle.Button,
+body.dark .DiscussionList .DiscussionListItem:active,
+body.dark .Dropdown-menu>li>a:active,
+body.dark .Dropdown-menu>li>button:active,
+body.dark .IndexPage .Button:not(.Button--primary):active,
+body.dark .SubscriptionMenu-button--false:active,
+body.dark .item-elevator .Button:active,
+body.dark .item-sort .open>.Dropdown-toggle.Button,
+body.dark .item-subscription .open>.Dropdown-toggle.Button,
+body.dark .sideNav .Dropdown--select .Dropdown-menu>li>a:active {
+    background-color: #42464b;
+    box-shadow: none
+}
+
+@keyframes dropdown-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.Composer {
+    -moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, .35);
+    -webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, .35);
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .35)
+}
+
+@media (min-width:768px) {
+    .Composer {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px
+    }
+}
+
+.App-content {
+    background-color: transparent !important
+}
+
+.PostStream-item:not(:last-child),
+.PostsUserPage-list>li {
+    border-bottom: none !important
+}
+
+.CommentPost {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 40px;
+    border-radius: 20px
+}
+
+body.dark .CommentPost {
+    background-color: #1b1f28
+}
+
+@media (min-width:768px) {
+    .CommentPost {
+        max-width: max-content;
+        min-width: 310px
+    }
+}
+
+.CommentPost .Post-actions {
+    opacity: 1 !important;
+    position: absolute;
+    margin-top: 5px;
+    right: 10px;
+    bottom: 5px
+}
+
+.CommentPost .Post-footer {
+    margin: 0
+}
+
+@media (min-width:768px) {
+
+    .PostStreamScrubber .Dropdown-menu,
+    .Scrubber-handle {
+        background-color: transparent !important
+    }
+}
+
+@media (max-width:767px) {
+    span.Button-label span.username {
+        display: inline-block;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+}
+
+.DiscussionPage-nav {
+    border: none !important
+}
+
+.Avatar {
+    background-color: transparent
+}
+
+body.dark .ReplyPlaceholder {
+    border-color: transparent;
+    transition: border-color .2s
+}
+
+body.dark .ReplyPlaceholder:hover {
+    border-color: #1b2028
+}
+
+.Post-actions>ul {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.Post-actions>ul>li>div>button {
+    padding: 10px 0
+}
+
+.Post-actions>ul>li>button,
+.Post-actions>ul>li>div>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: linear background-color .2s;
+    border-radius: 20px;
+    background-color: transparent
+}
+
+.Post-actions>ul>li>button:not(.disabled):hover,
+.Post-actions>ul>li>div>button:hover {
+    background-color: #c8d8ea !important
+}
+
+.Post-actions>ul>li>button:not(.disabled):active,
+.Post-actions>ul>li>div>button:active,
+.Post-actions>ul>li>div>button:focus {
+    background-color: #b5cbe3 !important
+}
+
+body.dark .Post-actions>ul>li>button:not(.disabled):hover,
+body.dark .Post-actions>ul>li>div>button:hover {
+    background-color: #2b2f35 !important
+}
+
+body.dark .Post-actions>ul>li>button:not(.disabled):active,
+body.dark .Post-actions>ul>li>div>button:active,
+body.dark .Post-actions>ul>li>div>button:focus {
+    background-color: #42464b !important
+}
+
+@media (min-width:768px) {
+    #app {
+        overflow-x: visible;
+        max-width: 100vw
+    }
+
+    .PostStream {
+        display: flex;
+        flex-direction: column
+    }
+
+    .DiscussionPage-nav {
+        top: 200px;
+        position: sticky;
+        height: fit-content
+    }
+
+    .DiscussionPage-nav>ul {
+        position: relative
+    }
+}
+
+@media (max-width:767px) {
+    .DiscussionPage-nav>ul {
+        display: flex
+    }
+
+    .DiscussionPage-nav .item-subscription {
+        flex-basis: 115px;
+        min-width: 115px
+    }
+}
+
+#footer {
+    width: auto !important
+}
