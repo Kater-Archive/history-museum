@@ -6,9 +6,20 @@ document.querySelector("#headerChangeTheme").onclick = () => {
     }
 }
 
+// Temp
+let url = new URL(location.href);
+let sp = new URLSearchParams(url.search);
+let post = 73735;
+
+if(sp.has("post")){
+    post = sp.get("post");
+}
 
 
-fetch("./d/73735.json").then(r => r.json()).then(r => {
+
+
+
+fetch(`./d/${post}.json`).then(r => r.json()).then(r => {
     document.querySelector("#backupUrl").innerText = r.baseUrl;
     document.querySelector("#backupTitle").innerText = r.title;
     document.querySelector("#backupPostsCount").innerText = r.content.length;
