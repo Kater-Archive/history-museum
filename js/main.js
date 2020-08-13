@@ -14,6 +14,7 @@ let cat = post.toString().substr(0, 2);
 
 if(sp.has("post")){
     post = sp.get("post");
+    cat = post.toString().substr(0, 2);
 }
 
 fetch(`./d/${cat}/${post}.json`).then(r => r.json()).then(r => {
