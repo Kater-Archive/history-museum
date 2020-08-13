@@ -15,10 +15,6 @@ if(sp.has("post")){
     post = sp.get("post");
 }
 
-
-
-
-
 fetch(`./d/${post}.json`).then(r => r.json()).then(r => {
     document.querySelector("#backupUrl").innerText = r.baseUrl;
     document.querySelector("#backupTitle").innerText = r.title;
