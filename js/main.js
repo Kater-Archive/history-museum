@@ -10,12 +10,13 @@ document.querySelector("#headerChangeTheme").onclick = () => {
 let url = new URL(location.href);
 let sp = new URLSearchParams(url.search);
 let post = 73735;
+let cat = post.toString().substr(0, 2);
 
 if(sp.has("post")){
     post = sp.get("post");
 }
 
-fetch(`./d/${post}.json`).then(r => r.json()).then(r => {
+fetch(`./d/${cat}/${post}.json`).then(r => r.json()).then(r => {
     document.querySelector("#backupUrl").innerText = r.baseUrl;
     document.querySelector("#backupTitle").innerText = r.title;
     document.querySelector("#backupPostsCount").innerText = r.content.length;
