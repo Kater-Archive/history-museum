@@ -10,10 +10,13 @@ from os.path import isfile, join
 
 # 根據傳入暱稱搜尋對應 UID。
 # -1 表示傳入暱稱直接找不到對照值，可以理解爲 7/23 04:46 之後的暱稱
-
+# -2 表示有多個使用者同時使用過某個名字，同時快取時間為 undefined （遺失快取時間）
 def searchUid(originName, cacheTime, userData, rawUserData):
     def find(name):
         if len(userData[name]) > 1:
+            if cacheTime == "undefined":
+                return -2
+
             for uid in userData[name]:
                 index = [i for i, x in enumerate(
                     rawUserData[uid]["name"]) if x == name]
