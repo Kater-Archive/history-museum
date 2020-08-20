@@ -76,14 +76,15 @@ def main():
                 uid = searchUid(floor["author"], cacheTime,
                                 userData, rawUserData)
 
-                if uid not in participant:
-                    name = floor["author"]
-                    temp = {
-                        "uid": uid,
-                        "name": name
-                    }
+                name = floor["author"]
+                temp = {
+                    "uid": uid,
+                    "name": name
+                }
 
-                    floors.append(temp)
+                floors.append(temp)
+
+                if uid not in participant:
                     participant.append(uid)
 
             # SQLite
