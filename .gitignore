@@ -1,4 +1,5 @@
 demo*
 .vscode
 search.sqlite3
+search.json
 test*

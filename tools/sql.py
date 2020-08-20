@@ -52,7 +52,8 @@ def searchUid(originName, cacheTime, userData, rawUserData):
 
 
 def main():
-    allName = {}
+    jsonData = []
+
     with open("./user.json", "r") as f:
         rawUserData = json.load(f)
 
@@ -85,8 +86,21 @@ def main():
                     floors.append(temp)
                     participant.append(uid)
 
+            # SQLite
             conn.execute("INSERT INTO allData(did, participant, floors, cacheTime) VALUES(?,?,?,?)", (did, json.dumps(
                 participant, ensure_ascii=False), json.dumps(floors, ensure_ascii=False), cacheTime))
+
+            # JSON
+            temp = {
+                "did": did,
+                "participant": participant,
+                "floors": floors,
+                "cacheTime": cacheTime
+            }
+            jsonData.append(temp)
+
+    with open("./search.json", "w") as f:
+        json.dump(jsonData, f)
 
 
 conn = sqlite3.connect('search.sqlite3')
