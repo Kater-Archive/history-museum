@@ -73,6 +73,7 @@ def main():
                 data = json.load(temp)
 
             did = f.split(".")[0]
+            title = data["title"]
             cacheTime = data["cacheTime"]
             participant = []
             floors = []
@@ -99,12 +100,13 @@ def main():
                     participant.append(uid)
 
             # SQLite
-            conn.execute("INSERT INTO allData(did, participant, floors, cacheTime) VALUES(?,?,?,?)", (did, json.dumps(
+            conn.execute("INSERT INTO allData(did, title, participant, floors, cacheTime) VALUES(?,?,?,?,?)", (did, title, json.dumps(
                 participant, ensure_ascii=False), json.dumps(floors, ensure_ascii=False), cacheTime))
 
             # JSON
             temp = {
                 "did": did,
+                "title": title,
                 "participant": participant,
                 "floors": floors,
                 "cacheTime": cacheTime
@@ -136,6 +138,7 @@ else:
         (
             id              INTEGER     PRIMARY KEY     AUTOINCREMENT,
             did             INTEGER     NOT NULL,
+            title           TEXT        NOT NULL,
             participant     TEXT        NOT NULL,
             floors          TEXT        NOT NULL,
             cacheTime       INTEGER     NOT NULL
